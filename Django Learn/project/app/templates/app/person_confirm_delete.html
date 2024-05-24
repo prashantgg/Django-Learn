@@ -1,0 +1,6 @@
+<form method="post">
+    <P>Are You sure you want to delete?{{Person}}</p>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Delete</button>
+</form>

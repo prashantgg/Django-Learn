@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+</head>
+<body>
+    <h1>About</h1>
+    {% if user %}
+        <p><h3>Variable:</h3> {{ variable }}</p>
+        <p><h3>Name:</h3> {{ user.name }}</p>
+        <p><h3>Age:</h3> {{ user.age }}</p>
+        <p><h3>Hobbies:</h3></p>
+        <ul>
+            {% for hobby in user.hobbies %}
+                <li>{{ hobby|capfirst }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {{ script|safe }}
+</body>
+</html>
